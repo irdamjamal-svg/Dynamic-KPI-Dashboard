@@ -10,6 +10,7 @@ const userRoutes = require("./backend/routes/userRoutes");
 const employeeRoutes = require("./backend/routes/employeeRoutes");
 const messageRoutes = require("./backend/routes/messageRoutes");
 const customerRoutes = require("./backend/routes/customerRoutes");
+const reportRoutes = require("./backend/routes/reportRoutes");
 
 // Initialize app
 const app = express();
@@ -59,6 +60,7 @@ app.use("/api/auth", userRoutes);
 app.use("/api/tasks", employeeRoutes);
 app.use("/api/message", messageRoutes);
 app.use("/api/customers", customerRoutes);
+app.use("/api/reports", reportRoutes);
 
 
 if(process.env.NODE_ENV === 'production'){
